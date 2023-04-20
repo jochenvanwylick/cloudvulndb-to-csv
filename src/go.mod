@@ -1,4 +1,4 @@
-module jvw.com/cve-db-to-csv
+module jvw.com/cloudvulndb-to-csv
 
 go 1.20
 
