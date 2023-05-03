@@ -32,7 +32,7 @@ jobs:
 
     - name: git commit
       run: |
-        git config --local user.email actionRunner@github.com"
+        git config --local user.email "actionRunner@github.com"
         git config --local user.name "github-actions"
         git add data/*.csv
         git commit -m "Added latest csv data"
