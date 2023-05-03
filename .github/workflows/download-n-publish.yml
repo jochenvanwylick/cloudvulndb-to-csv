@@ -1,4 +1,4 @@
-name: download-n-publish
+name: 02-Download-n-publish
 
 on:
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
       run: |
         git config --local user.email "actionRunner@github.com"
         git config --local user.name "github-actions"
-        git add data/*.csv
+        git add data/*.csv -f
         git commit -m "Added latest csv data"
         git push
 
