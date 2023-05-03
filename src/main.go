@@ -44,11 +44,12 @@ func main() {
 	log.SetOutput(os.Stdout)
 
 	tmp_folder := "tmp/data"
+	output_folder := "data"
 	data_folder := tmp_folder + vulnDefRepoFolder
 	// https://pkg.go.dev/time#pkg-constants - for reference
 	// Golang time formatting is a bit different from other languages it seems
 	YYYYMMDD_format := "20060102"
-	filename := fmt.Sprintf("%s%s", time.Now().Format(YYYYMMDD_format), outputFilePostfix)
+	filename := fmt.Sprintf("%s/%s%s", output_folder, time.Now().Format(YYYYMMDD_format), outputFilePostfix)
 
 	cleanUp(tmp_folder)
 	getVulns(openvdbRepo, tmp_folder)
