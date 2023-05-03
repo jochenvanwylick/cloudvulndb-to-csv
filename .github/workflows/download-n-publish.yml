@@ -1,0 +1,38 @@
+name: CI-build
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 1 * *'
+
+jobs:
+  build:
+    defaults:
+      run:
+        working-directory: ./src
+        
+    runs-on: ubuntu-latest    
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.19
+
+    - name: Build
+      run: go build -v .
+
+
+    - name: run
+      run: ./cloudvulndb-to-csv
+
+    - name: git commit
+      run: |
+        git config --local user.email actionRunner@github.com"
+        git config --local user.name "github-actions"
+        git add data/*
+        git commit -m "Added latest csv data"
+        git push
+

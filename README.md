@@ -1,5 +1,7 @@
 # cloudvulndb-to-csv
 
+[![CI-build](https://github.com/jochenvanwylick/cloudvulndb-to-csv/actions/workflows/ci-build.yml/badge.svg)](https://github.com/jochenvanwylick/cloudvulndb-to-csv/actions/workflows/ci-build.yml)
+
 Downloads the vulnerabilities reported in [https://www.cloudvulndb.org/](https://www.cloudvulndb.org/) and stores them as CSV, intended for trend analysis.
 
 ## Download & Run
