@@ -1,8 +1,14 @@
 # cloudvulndb-to-csv
 
 [![CI-build](https://github.com/jochenvanwylick/cloudvulndb-to-csv/actions/workflows/ci-build.yml/badge.svg)](https://github.com/jochenvanwylick/cloudvulndb-to-csv/actions/workflows/ci-build.yml)
+[![02-Download-n-publish](https://github.com/jochenvanwylick/cloudvulndb-to-csv/actions/workflows/download-n-publish.yml/badge.svg)](https://github.com/jochenvanwylick/cloudvulndb-to-csv/actions/workflows/download-n-publish.yml)
+
 
 Downloads the vulnerabilities reported in [https://www.cloudvulndb.org/](https://www.cloudvulndb.org/) and stores them as CSV, intended for trend analysis.
+
+Auto download every 1st day of the week. Files can be found in [./src/data](./src/data)
+
+
 
 ## Download & Run
 
